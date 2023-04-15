@@ -7,11 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="001-HelloSpring" />
         <module name="002-spring-IOC" />
         <module name="003-spring-IOC-Annotation" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="001-HelloSpring" target="8" />
       <module name="002-spring-IOC" target="8" />
       <module name="003-spring-IOC-Annotation" target="8" />
     </bytecodeTargetLevel>

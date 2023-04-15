@@ -28,7 +28,8 @@
 <!--    <bean id="user1" class="com.chuanqihou.spring.bean.User" scope="singleton"/>
     <bean id="user2" class="com.chuanqihou.spring.bean.User" scope="prototype"/>-->
 
-
-    <!--<bean id=""-->
+    <!--测试lazy-init属性-->
+    <bean id="user1" class="com.chuanqihou.spring.bean.User"/>
+    <bean id="user2" class="com.chuanqihou.spring.bean.User" lazy-init="true"/>
 
 </beans>

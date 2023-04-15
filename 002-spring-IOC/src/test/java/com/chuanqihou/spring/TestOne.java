@@ -71,4 +71,11 @@ public class TestOne {
         System.out.println(user22);
     }
 
+    @Test
+    public void testLazyInit() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user1 = ac.getBean("user1");
+        Object user2 = ac.getBean("user2");
+    }
+
 }
