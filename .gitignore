@@ -1,0 +1,3 @@
+# Project exclude paths
+/002-spring-IOC/target/
+/003-spring-IOC-Annotation/target/

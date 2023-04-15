@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--创建user对象-->
+    <!--<bean id="user" class="com.chuanqihou.spring.bean.User"/>-->
+
+    <!--测试属性name-->
+    <!--<bean id="user" name="u,us" class="com.chuanqihou.spring.bean.User"/>-->
+
+    <!--测试depends-on属性-->
+    <!--
+        depends-on属性用于指定当前bean依赖的其他bean的ID。
+        这意味着在初始化当前bean之前，所依赖的bean必须先被初始化。
+        如果依赖的bean尚未初始化，则会在当前bean初始化之前先初始化它。
+    -->
+<!--    <bean id="car" class="com.chuanqihou.spring.bean.Cat"/>
+    <bean id="user" class="com.chuanqihou.spring.bean.User" depends-on="car"/>-->
+
+    <!--测试init-method属性-->
+    <!--<bean id="user" class="com.chuanqihou.spring.bean.User" init-method="init"/>-->
+
+    <!--测试destroy-method属性-->
+    <!--<bean id="user" class="com.chuanqihou.spring.bean.User" destroy-method="destroy"/>-->
+
+    <!--测试scope属性-->
+<!--    <bean id="user1" class="com.chuanqihou.spring.bean.User" scope="singleton"/>
+    <bean id="user2" class="com.chuanqihou.spring.bean.User" scope="prototype"/>-->
+
+
+    <!--<bean id=""-->
+
+</beans>
