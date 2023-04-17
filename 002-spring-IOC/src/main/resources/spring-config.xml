@@ -29,7 +29,49 @@
     <bean id="user2" class="com.chuanqihou.spring.bean.User" scope="prototype"/>-->
 
     <!--测试lazy-init属性-->
-    <bean id="user1" class="com.chuanqihou.spring.bean.User"/>
-    <bean id="user2" class="com.chuanqihou.spring.bean.User" lazy-init="true"/>
+<!--    <bean id="user1" class="com.chuanqihou.spring.bean.User"/>
+    <bean id="user2" class="com.chuanqihou.spring.bean.User" lazy-init="true"/>-->
+
+    <!--测试非静态工厂创建bean-->
+    <!--<bean id="user" class="com.chuanqihou.spring.factory.StaticFactoryDemo" factory-method="createBean"/>-->
+
+    <!--测试静态工厂创建bean-->
+<!--    <bean id="fc" class="com.chuanqihou.spring.factory.FactoryDemo"/>
+    <bean id="user" factory-bean="fc" factory-method="createBean"/>-->
+
+    <!--使用构造方法给简单类型赋值-->
+<!--    <bean id="user" class="com.chuanqihou.spring.bean.User">
+        <constructor-arg name="userId" value="1001"/>
+        <constructor-arg name="userName" value="张三"/>
+        <constructor-arg name="userPassword" value="zhangsan"/>
+        <constructor-arg name="userAge" value="22"/>
+    </bean>-->
+
+    <!--使用构造方法给引用类型赋值-->
+<!--    <bean id="cat" class="com.chuanqihou.spring.bean.Cat">
+        <constructor-arg index="0" value="擦头"/>
+    </bean>
+
+    <bean id="user" class="com.chuanqihou.spring.bean.User">
+        <constructor-arg name="userId" value="1001"/>
+        <constructor-arg name="userName" value="张三"/>
+        <constructor-arg name="userPassword" value="zhangsan"/>
+        <constructor-arg name="userAge" value="22"/>
+        <constructor-arg name="cat" ref="cat"/>
+    </bean>-->
+
+    <!--使用set注入赋值-->
+<!--    <bean id="cat" class="com.chuanqihou.spring.bean.Cat"/>
+    <bean id="user" class="com.chuanqihou.spring.bean.User">
+        <property name="userId" value="1002"/>
+        <property name="userName" value="李四"/>
+        <property name="userPassword" value="lisi"/>
+        <property name="userAge" value="21"/>
+        <property name="cat" ref="cat"/>
+    </bean>-->
+
+    <!--测试id和name属性-->
+<!--    <bean id="user" class="com.chuanqihou.spring.bean.User"/>
+    <bean name="user" class="com.chuanqihou.spring.bean.User"/>-->
 
 </beans>

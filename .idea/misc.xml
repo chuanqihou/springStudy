@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/002-spring-IOC/pom.xml" />
         <option value="$PROJECT_DIR$/003-spring-IOC-Annotation/pom.xml" />
         <option value="$PROJECT_DIR$/001-HelloSpring/pom.xml" />
+        <option value="$PROJECT_DIR$/004-transform-project-annotation/pom.xml" />
+        <option value="$PROJECT_DIR$/mySpring/pom.xml" />
+        <option value="$PROJECT_DIR$/005-proxy/pom.xml" />
       </list>
     </option>
   </component>

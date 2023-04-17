@@ -18,4 +18,11 @@ public class TestAnnotation {
         User user = ac.getBean("user", User.class);
         System.out.println(user);
     }
+
+    @Test
+    public void test2() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        User user = ac.getBean("user", User.class);
+        System.out.println(user);
+    }
 }

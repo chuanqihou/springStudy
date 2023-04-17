@@ -78,4 +78,46 @@ public class TestOne {
         Object user2 = ac.getBean("user2");
     }
 
+    @Test
+    public void testStaticFactoryCreateBean() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testFactoryCreateBean() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testConstructorSimpleValue() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testConstructorRefValue() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testSetValue() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
+    @Test
+    public void testIdAndName() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("user");
+        System.out.println(user);
+    }
+
 }

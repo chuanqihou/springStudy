@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
  * @date 2023/4/14 11:42
  * @description
  */
-//@Data
+@Data
 @AllArgsConstructor
 //@NoArgsConstructor
 public class User {
@@ -24,6 +24,8 @@ public class User {
     private String userPassword;
 
     private Integer userAge;
+
+    private Cat cat;
 
     public User() {
         System.out.println("user无参构造");

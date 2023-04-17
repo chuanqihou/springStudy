@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+    <!--创建user对象-->
+    <bean id="user" class="com.chuanqihou.myspring.domain.User"/>
+
+
+</beans>

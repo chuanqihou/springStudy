@@ -7,15 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="004-transform-project-annotation" />
+        <module name="003-spring-IOC-Annotation" />
         <module name="001-HelloSpring" />
         <module name="002-spring-IOC" />
-        <module name="003-spring-IOC-Annotation" />
+        <module name="mySpring" />
+        <module name="005-proxy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="001-HelloSpring" target="8" />
       <module name="002-spring-IOC" target="8" />
       <module name="003-spring-IOC-Annotation" target="8" />
+      <module name="004-transform-project-annotation" target="8" />
+      <module name="005-proxy" target="8" />
+      <module name="mySpring" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
