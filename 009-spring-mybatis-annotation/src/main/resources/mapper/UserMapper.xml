@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chuanqihou.stu.mapper.UserMapper">
+    <select id="selectUserById" resultType="User" parameterType="Long">
+        select * from users where id=#{userId}
+    </select>
+
+    <select id="selectAllUser" resultType="User">
+        select * from users
+    </select>
+
+    <insert id="insertUser">
+        insert into users (id, uname, sex, tel, profession, sal, address)
+        VALUES (null, #{uname}, #{sex}, #{tel}, #{profession}, #{sal}, #{address});
+    </insert>
+
+</mapper>

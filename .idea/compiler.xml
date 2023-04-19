@@ -9,7 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="006-spring-AOP" />
         <module name="003-spring-IOC-Annotation" />
+        <module name="009-spring-mybatis-annotation" />
         <module name="001-HelloSpring" />
+        <module name="008-spring-mybatis" />
         <module name="005-proxy" />
         <module name="004-transform-project-annotation" />
         <module name="002-spring-IOC" />
@@ -25,7 +27,10 @@
       <module name="005-proxy" target="8" />
       <module name="006-spring-AOP" target="8" />
       <module name="007-spring-aop-annotation-log" target="8" />
+      <module name="008-spring-mybatis" target="8" />
+      <module name="009-spring-mybatis-annotation" target="8" />
       <module name="mySpring" target="8" />
+      <module name="myTest" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

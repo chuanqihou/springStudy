@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/005-proxy/pom.xml" />
         <option value="$PROJECT_DIR$/006-spring-AOP/pom.xml" />
         <option value="$PROJECT_DIR$/007-spring-aop-annotation-log/pom.xml" />
+        <option value="$PROJECT_DIR$/008-spring-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/009-spring-mybatis-annotation/pom.xml" />
       </list>
     </option>
   </component>

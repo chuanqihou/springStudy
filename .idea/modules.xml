@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/005-proxy/005-proxy.iml" filepath="$PROJECT_DIR$/005-proxy/005-proxy.iml" />
       <module fileurl="file://$PROJECT_DIR$/006-spring-AOP/006-spring-AOP.iml" filepath="$PROJECT_DIR$/006-spring-AOP/006-spring-AOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/007-spring-aop-annotation-log/007-spring-aop-annotation-log.iml" filepath="$PROJECT_DIR$/007-spring-aop-annotation-log/007-spring-aop-annotation-log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/008-spring-mybatis/008-spring-mybatis.iml" filepath="$PROJECT_DIR$/008-spring-mybatis/008-spring-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/009-spring-mybatis-annotation/009-spring-mybatis-annotation.iml" filepath="$PROJECT_DIR$/009-spring-mybatis-annotation/009-spring-mybatis-annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/mySpring/mySpring.iml" filepath="$PROJECT_DIR$/mySpring/mySpring.iml" />
     </modules>
   </component>

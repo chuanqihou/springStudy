@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!--
+        导入数据库连接信息
+        FALLBACK:当配置文件中的key与windows中的某些key冲突时，以配置文件内的key为准
+    -->
+    <context:property-placeholder location="db.properties" system-properties-mode="FALLBACK"/>
+
+    <!--配置数据源-->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+    <!--配置设置（settings）-->
+    <bean id="configuration" class="org.apache.ibatis.session.Configuration">
+        <!--日志-->
+        <property name="logImpl" value="org.apache.ibatis.logging.log4j.Log4jImpl"/>
+        <!--二级缓存-->
+        <property name="cacheEnabled" value="true"/>
+    </bean>
+
+    <!--将mybatis交给spring容器管理【产生SessionFactory】-->
+    <bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--读取mybatis配置文件-->
+        <!--<property name="configLocation" value="mybatis-config.xml"/>-->
+
+        <!--配置类别名-->
+        <property name="typeAliasesPackage" value="com.chuanqihou.stu.domain"/>
+        <!--配置分页插件-->
+        <property name="plugins">
+            <array>
+                <bean id="pageInterceptor" class="com.github.pagehelper.PageInterceptor"/>
+            </array>
+        </property>
+
+        <!--配置设置（settings）-->
+        <property name="configuration" ref="configuration"/>
+
+        <!--配置映射文件-->
+        <property name="mapperLocations" value="mapper/**/*Mapper.xml"/>
+
+        <!--数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--扫描Mapper,创建对应的代理类（即接口实现类）-->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--扫描mapper包-->
+        <property name="basePackage" value="com.chuanqihou.stu.mapper"/>
+        <!---->
+        <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
+    </bean>
+
+
+
+    <!--配置事务（声明式事务）-->
+    <bean id="dataSourceTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--开启事务注解-->
+    <tx:annotation-driven transaction-manager="dataSourceTransactionManager"/>
+
+    <!--开启扫描-->
+    <context:component-scan base-package="com.chuanqihou.stu"/>
+
+</beans>
