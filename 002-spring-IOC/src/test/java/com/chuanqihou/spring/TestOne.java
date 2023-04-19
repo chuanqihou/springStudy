@@ -120,4 +120,11 @@ public class TestOne {
         System.out.println(user);
     }
 
+    @Test
+    public void testArray() {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config.xml");
+        Object user = ac.getBean("dog");
+        System.out.println(user);
+    }
+
 }

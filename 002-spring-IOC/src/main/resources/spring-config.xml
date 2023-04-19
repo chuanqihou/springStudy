@@ -74,4 +74,31 @@
 <!--    <bean id="user" class="com.chuanqihou.spring.bean.User"/>
     <bean name="user" class="com.chuanqihou.spring.bean.User"/>-->
 
+    <bean id="dog" class="com.chuanqihou.spring.bean.Dog">
+
+        <property name="array">
+            <set>
+                <value>12</value>
+                <value>34</value>
+                <value>56</value>
+            </set>
+        </property>
+
+        <property name="listString">
+            <list>
+                <value>12</value>
+                <value>34</value>
+                <value>56</value>
+            </list>
+        </property>
+
+        <property name="mapString">
+            <map>
+                <entry key="a" value="aa"/>
+                <entry key="b" value="bb"/>
+            </map>
+        </property>
+
+    </bean>
+
 </beans>
